@@ -1,0 +1,34 @@
+{
+  "version": "0.1.0-draft",
+  "name": "sae_public_benchmark_pack_v1",
+  "tasks": [
+    {
+      "id": "coding_browser_adapter",
+      "title": "Browser adapter planning",
+      "category": "coding",
+      "ask": "Design a browser-connected companion surface that can inspect pages, save routines, and return readable results safely.",
+      "participants": ["Operator", "Coordinator", "ExternalAgentMock", "ImplementationAgent"]
+    },
+    {
+      "id": "support_resolution",
+      "title": "Support resolution planning",
+      "category": "support",
+      "ask": "Plan a safe autonomous customer-support workflow that resolves simple refund and escalation cases while preserving trust.",
+      "participants": ["Operator", "SupportAgent", "ComplianceAgent", "ExternalAgentMock"]
+    },
+    {
+      "id": "incident_triage",
+      "title": "Incident triage handoff",
+      "category": "operations",
+      "ask": "Triage a production incident, propose the safest first response, and return a reviewable operator handoff packet.",
+      "participants": ["Operator", "IncidentTriageAgent", "ReviewAgent", "ExternalAgentMock"]
+    },
+    {
+      "id": "experimental_adapter",
+      "title": "Experimental adapter review",
+      "category": "experimental_infra",
+      "ask": "Review a proposed experimental adapter and return the safest first implementation cut with explicit review posture.",
+      "participants": ["Operator", "Coordinator", "ComplianceAgent", "ExternalAgentMock"]
+    }
+  ]
+}

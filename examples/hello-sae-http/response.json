@@ -1,0 +1,14 @@
+{
+  "task_id": "sae-hello-http-001",
+  "artifact_type": "review_packet",
+  "summary": "The safest first cut is a read-only adapter with explicit approval before any widened action.",
+  "recommended_first_cut": [
+    "implement request validation",
+    "return a bounded review packet",
+    "hold all live execution behind human review"
+  ],
+  "review_notes": [
+    "The task is medium risk because it affects downstream execution shape.",
+    "The deliverable is clear enough for a second implementer to continue."
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "generated_at": "2026-05-08T05:59:22.654Z",
+  "task_id": "incident_triage",
+  "title": "Incident triage handoff",
+  "ask": "Triage a production incident, propose the safest first response, and return a reviewable operator handoff packet.",
+  "participants": [
+    "Operator",
+    "IncidentTriageAgent",
+    "ReviewAgent",
+    "ExternalAgentMock"
+  ],
+  "category": "operations",
+  "reference_shape": {
+    "domain": "incident_response",
+    "title": "Incident response formula",
+    "objective": "triage the incident, run diagnostics, rank probable fixes, and return the safest next operator action",
+    "expected_artifacts": [
+      "incident scorecard",
+      "diagnostic report",
+      "fix recommendation",
+      "operator handoff"
+    ],
+    "suggested_steps": [
+      "Classify the incident",
+      "Choose the safest first action",
+      "Capture review posture",
+      "Return an operator handoff"
+    ]
+  },
+  "exportPacket": {
+    "benchmark_version": "0.1.0-draft",
+    "task_id": "incident_triage",
+    "lanes": [
+      {
+        "lane": "plain_a2a",
+        "metrics": [
+          {
+            "id": "delegation_clarity",
+            "score": 48,
+            "note": "Higher is better. This reflects how quickly participants can divide the work without renegotiating intent."
+          },
+          {
+            "id": "clarification_pressure",
+            "score": 62,
+            "note": "Lower is better. This estimates how many obvious follow-up questions still remain before safe execution."
+          },
+          {
+            "id": "artifact_specificity",
+            "score": 48,
+            "note": "Higher is better. This reflects how concrete and reviewable the expected outputs are."
+          },
+          {
+            "id": "operator_confidence",
+            "score": 51,
+            "note": "Higher is better. This reflects how inspectable the work is before execution widens."
+          },
+          {
+            "id": "adoption_overhead",
+            "score": 22,
+            "note": "Lower is better. This reflects how much extra implementation burden the lane introduces for an outside team."
+          }
+        ],
+        "notes": [
+          "Baseline carrier with no extra shaping layer.",
+          "Task, messages, and artifacts travel, but much of the structure is negotiated later."
+        ]
+      },
+      {
+        "lane": "sae_over_a2a",
+        "metrics": [
+          {
+            "id": "delegation_clarity",
+            "score": 78,
+            "note": "Higher is better. This reflects how quickly participants can divide the work without renegotiating intent."
+          },
+          {
+            "id": "clarification_pressure",
+            "score": 34,
+            "note": "Lower is better. This estimates how many obvious follow-up questions still remain before safe execution."
+          },
+          {
+            "id": "artifact_specificity",
+            "score": 77,
+            "note": "Higher is better. This reflects how concrete and reviewable the expected outputs are."
+          },
+          {
+            "id": "operator_confidence",
+            "score": 75,
+            "note": "Higher is better. This reflects how inspectable the work is before execution widens."
+          },
+          {
+            "id": "adoption_overhead",
+            "score": 39,
+            "note": "Lower is better. This reflects how much extra implementation burden the lane introduces for an outside team."
+          }
+        ],
+        "notes": [
+          "A2A remains the carrier, but SAE adds a neutral shared work-shape.",
+          "This lane is the intended public adoption target."
+        ]
+      },
+      {
+        "lane": "compiler_shaped_sae_over_a2a",
+        "metrics": [
+          {
+            "id": "delegation_clarity",
+            "score": 86,
+            "note": "Higher is better. This reflects how quickly participants can divide the work without renegotiating intent."
+          },
+          {
+            "id": "clarification_pressure",
+            "score": 28,
+            "note": "Lower is better. This estimates how many obvious follow-up questions still remain before safe execution."
+          },
+          {
+            "id": "artifact_specificity",
+            "score": 86,
+            "note": "Higher is better. This reflects how concrete and reviewable the expected outputs are."
+          },
+          {
+            "id": "operator_confidence",
+            "score": 84,
+            "note": "Higher is better. This reflects how inspectable the work is before execution widens."
+          },
+          {
+            "id": "adoption_overhead",
+            "score": 57,
+            "note": "Lower is better. This reflects how much extra implementation burden the lane introduces for an outside team."
+          }
+        ],
+        "notes": [
+          "A richer internal compiler shapes the work first, then exports into SAE for outside exchange.",
+          "This lane is richer, but also heaviest for outside adopters."
+        ]
+      }
+    ]
+  },
+  "summary": "This draft POC run was generated locally from the SAE benchmark harness and an internal task compiler demo. It is reproducible, but it is not yet independently graded by an outside evaluator."
+}

@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0-draft",
+  "name": "sae_public_scoring_rubric_v1",
+  "metrics": [
+    {
+      "id": "delegation_clarity",
+      "label": "Delegation clarity",
+      "description": "How clearly the task divides into actionable roles or steps.",
+      "score_range": [0, 100],
+      "direction": "higher_is_better"
+    },
+    {
+      "id": "clarification_pressure",
+      "label": "Clarification pressure",
+      "description": "How many follow-up questions are still obviously required before execution.",
+      "score_range": [0, 100],
+      "direction": "lower_is_better"
+    },
+    {
+      "id": "artifact_specificity",
+      "label": "Artifact specificity",
+      "description": "How specific and reviewable the expected outputs are.",
+      "score_range": [0, 100],
+      "direction": "higher_is_better"
+    },
+    {
+      "id": "operator_confidence",
+      "label": "Operator confidence",
+      "description": "How inspectable the task shape is before execution widens.",
+      "score_range": [0, 100],
+      "direction": "higher_is_better"
+    },
+    {
+      "id": "adoption_overhead",
+      "label": "Adoption overhead",
+      "description": "How much extra implementation burden the lane introduces for an external team.",
+      "score_range": [0, 100],
+      "direction": "lower_is_better"
+    }
+  ],
+  "recommended_external_tools": [
+    "agentevals",
+    "OpenAI Evals",
+    "LangSmith"
+  ]
+}

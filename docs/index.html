@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAE | Structured Agent Exchange</title>
+    <meta
+      name="description"
+      content="Structured Agent Exchange (SAE) is an open specification for sharing the shape of agent work across A2A and non-A2A systems."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <img class="brand-mark" src="./sae-mark.svg" alt="SAE mark" />
+          <div>
+            <p class="eyebrow">Structured Agent Exchange</p>
+            <h1>An open task shape for agent systems.</h1>
+          </div>
+        </div>
+        <nav class="topnav">
+          <a href="./wiki.html">Wiki</a>
+          <a href="../OVERVIEW.md">Overview</a>
+          <a href="../README.md">Spec</a>
+          <a href="../QUICKSTART.md">Quickstart</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="kicker">Overview</p>
+            <h2>SAE helps agent systems agree on the work before they try to do the work.</h2>
+            <p class="lede">
+              Structured Agent Exchange is an open specification for sharing the shape of agent
+              work across A2A and non-A2A systems. It does not replace transport, discovery, or
+              runtime layers. It gives systems a small, neutral packet for keeping task meaning
+              clear across handoff.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="../OVERVIEW.md">Read the overview</a>
+              <a class="button" href="../README.md">Read the spec</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <p class="panel-label">Core fields</p>
+            <div class="hero-mark-wrap">
+              <img class="hero-mark" src="./sae-mark.svg" alt="Structured Agent Exchange logo" />
+            </div>
+            <ul class="feature-list">
+              <li>Objective</li>
+              <li>Constraints</li>
+              <li>Deliverable</li>
+              <li>Delegation hints</li>
+              <li>Review posture</li>
+              <li>Instruction frame</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="grid-section">
+          <article class="card">
+            <p class="card-kicker">What it is</p>
+            <h3>A small shared task packet</h3>
+            <p>
+              SAE stays focused on task shape. It is deliberately narrower than a full agent
+              framework or product stack.
+            </p>
+          </article>
+          <article class="card">
+            <p class="card-kicker">How it fits</p>
+            <h3>Designed to ride over A2A</h3>
+            <p>
+              A2A handles connection, tasks, messages, artifacts, and extensions. SAE adds a
+              stable, reviewable work packet above that layer.
+            </p>
+          </article>
+          <article class="card">
+            <p class="card-kicker">Why it helps</p>
+            <h3>Less drift across systems</h3>
+            <p>
+              SAE helps reduce ambiguity when work moves across different vendors, runtimes, or
+              environments.
+            </p>
+          </article>
+        </section>
+
+        <section class="stack-section">
+          <div class="section-heading">
+            <p class="kicker">Start here</p>
+            <h2>Reading path</h2>
+          </div>
+          <div class="docs-grid">
+            <a class="doc-card" href="../OVERVIEW.md">
+              <strong>Overview</strong>
+              <span>The short explanation of what SAE is and why it exists.</span>
+            </a>
+            <a class="doc-card" href="../README.md">
+              <strong>README</strong>
+              <span>Scope, framing, and spec index.</span>
+            </a>
+            <a class="doc-card" href="../QUICKSTART.md">
+              <strong>Quickstart</strong>
+              <span>The fastest path to a first SAE packet.</span>
+            </a>
+            <a class="doc-card" href="../TUTORIAL.md">
+              <strong>Tutorial</strong>
+              <span>Walk a fuzzy ask into a stable shared task.</span>
+            </a>
+            <a class="doc-card" href="../SAE-OVER-A2A.md">
+              <strong>SAE over A2A</strong>
+              <span>How SAE layers over the A2A protocol.</span>
+            </a>
+            <a class="doc-card" href="../NON-A2A-TRANSLATION.md">
+              <strong>Non-A2A translation</strong>
+              <span>Adapters for HTTP, MCP-style hosts, and CLI workflows.</span>
+            </a>
+            <a class="doc-card" href="./wiki.html">
+              <strong>Wiki</strong>
+              <span>Reference path, concepts, and supporting material.</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="stack-section">
+          <div class="section-heading">
+            <p class="kicker">Validation</p>
+            <h2>How SAE is being tested</h2>
+          </div>
+          <div class="grid-section">
+            <article class="card">
+              <p class="card-kicker">POC bundle</p>
+              <h3>Draft benchmark pack</h3>
+              <p>
+                SAE includes a reproducible draft POC bundle for comparing plain A2A, SAE over
+                A2A, and a compiler-shaped SAE lane.
+              </p>
+              <a class="inline-link" href="../poc/README.md">Open POC notes</a>
+            </article>
+            <article class="card">
+              <p class="card-kicker">Conformance</p>
+              <h3>Schema and validation</h3>
+              <p>
+                Public schema, examples, and conformance notes define the base specification before
+                wider adoption claims.
+              </p>
+              <a class="inline-link" href="../CONFORMANCE.md">Open conformance</a>
+            </article>
+            <article class="card">
+              <p class="card-kicker">External scoring</p>
+              <h3>Evaluation plan</h3>
+              <p>
+                The draft POC includes benchmark outputs and an external evaluation plan for
+                comparing SAE-shaped exchange against plain baseline exchange.
+              </p>
+              <a class="inline-link" href="../poc/EXTERNAL-EVALUATION-OPTIONS.md">Open evaluation notes</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="footer-band">
+          <div>
+            <p class="kicker">Status</p>
+            <h2>Public draft, ready for review and trial implementations.</h2>
+            <p>
+              SAE is ready to be published as a draft standard. The next step is an outside
+              implementation trial plus externally scored evaluation traces.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="../OVERVIEW.md">Overview</a>
+            <a href="../LICENSE">License</a>
+            <a href="../NOTICE">Notice</a>
+            <a href="../CHANGELOG.md">Changelog</a>
+            <a href="../IMPLEMENTATIONS.md">Implementations</a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAE Wiki</title>
+    <meta
+      name="description"
+      content="Wiki and reading path for Structured Agent Exchange (SAE)."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <img class="brand-mark" src="./sae-mark.svg" alt="SAE mark" />
+          <div>
+            <p class="eyebrow">Structured Agent Exchange</p>
+            <h1>Wiki</h1>
+          </div>
+        </div>
+        <nav class="topnav">
+          <a href="./index.html">Home</a>
+          <a href="../OVERVIEW.md">Overview</a>
+          <a href="../README.md">Spec</a>
+          <a href="../QUICKSTART.md">Quickstart</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="stack-section">
+          <div class="section-heading">
+            <p class="kicker">Orientation</p>
+            <h2>What SAE is trying to solve</h2>
+          </div>
+          <article class="card prose-card">
+            <p>
+              SAE gives agents a shared way to describe the work before transport and runtime
+              details take over. The aim is less renegotiation, clearer handoff, and outputs that
+              are easier for another system or a human reviewer to understand.
+            </p>
+            <p>
+              SAE is intentionally small. If a field does not help preserve task meaning across
+              systems, it probably does not belong in the public core.
+            </p>
+          </article>
+        </section>
+
+        <section class="grid-section">
+          <article class="card">
+            <p class="card-kicker">Concept</p>
+            <h3>Task shape</h3>
+            <p>
+              SAE focuses on objective, constraints, deliverable, delegation hints, review posture,
+              and instruction framing.
+            </p>
+          </article>
+          <article class="card">
+            <p class="card-kicker">Translation</p>
+            <h3>Endpoint codex</h3>
+            <p>
+              Different model families benefit from different prompt tactics. SAE keeps the packet
+              stable while the translator adapts presentation for the endpoint.
+            </p>
+          </article>
+          <article class="card">
+            <p class="card-kicker">Proof</p>
+            <h3>Evaluation first</h3>
+            <p>
+              Adoption claims should be earned through conformance, trace-based comparisons, and at
+              least one outside implementation trial.
+            </p>
+          </article>
+        </section>
+
+        <section class="stack-section">
+          <div class="section-heading">
+            <p class="kicker">Reading path</p>
+            <h2>Reference set</h2>
+          </div>
+          <div class="docs-grid">
+            <a class="doc-card" href="../OVERVIEW.md">
+              <strong>Overview</strong>
+              <span>The shortest explanation of what SAE is and why it exists.</span>
+            </a>
+            <a class="doc-card" href="../README.md">
+              <strong>README</strong>
+              <span>Protocol overview and file index.</span>
+            </a>
+            <a class="doc-card" href="../WIKI.md">
+              <strong>Markdown wiki</strong>
+              <span>Repo-native version of this reading path.</span>
+            </a>
+            <a class="doc-card" href="../CONFORMANCE.md">
+              <strong>Conformance</strong>
+              <span>What counts as a valid SAE implementation.</span>
+            </a>
+            <a class="doc-card" href="../IMPLEMENTATIONS.md">
+              <strong>Implementations</strong>
+              <span>Current references and outside-trial expectations.</span>
+            </a>
+            <a class="doc-card" href="../MODEL-ENDPOINT-CODEX.md">
+              <strong>Model endpoint codex</strong>
+              <span>Prompt-shaping guidance by endpoint family.</span>
+            </a>
+            <a class="doc-card" href="../poc/EXTERNAL-EVALUATION-OPTIONS.md">
+              <strong>External evaluation</strong>
+              <span>External scoring options and benchmark direction.</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="footer-band">
+          <div>
+            <p class="kicker">Evaluation</p>
+            <h2>Stay specific.</h2>
+            <p>
+              SAE should be presented with real examples, a benchmark pack, and a growing
+              translation layer. Bigger claims should wait for outside scoring and adoption.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="../poc/README.md">POC bundle</a>
+            <a href="../poc/EXTERNAL-EVALUATION-OPTIONS.md">Evaluation options</a>
+            <a href="../CHANGELOG.md">Changelog</a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

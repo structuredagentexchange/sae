@@ -1,0 +1,64 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="saeGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 220) rotate(90) scale(184 184)">
+      <stop offset="0" stop-color="#F5FBFF" stop-opacity="0.98"/>
+      <stop offset="0.34" stop-color="#8FD0FF" stop-opacity="0.95"/>
+      <stop offset="0.7" stop-color="#1787FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#0A3C84" stop-opacity="0.14"/>
+    </radialGradient>
+    <linearGradient id="saeBlue" x1="88" y1="226" x2="424" y2="226" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1567D8"/>
+      <stop offset="0.5" stop-color="#63C1FF"/>
+      <stop offset="1" stop-color="#0D67D4"/>
+    </linearGradient>
+    <linearGradient id="saeInner" x1="176" y1="170" x2="336" y2="318" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF7FF"/>
+      <stop offset="0.48" stop-color="#D0ECFF"/>
+      <stop offset="1" stop-color="#84C8FF"/>
+    </linearGradient>
+    <linearGradient id="saeShadow" x1="256" y1="148" x2="256" y2="344" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B57B7" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#083B7E" stop-opacity="0.5"/>
+    </linearGradient>
+    <filter id="softBlur" x="40" y="90" width="432" height="300" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="256" cy="226" rx="150" ry="88" fill="url(#saeGlow)" filter="url(#softBlur)"/>
+
+  <path
+    d="M90 226C122 184 162 158 214 150C231 148 241 148 256 148C271 148 281 148 298 150C350 158 390 184 422 226C390 268 350 294 298 302C281 304 271 304 256 304C241 304 231 304 214 302C162 294 122 268 90 226Z"
+    fill="url(#saeBlue)"
+    fill-opacity="0.16"
+    stroke="#3A8DFF"
+    stroke-opacity="0.74"
+    stroke-width="2.2"
+  />
+
+  <path
+    d="M160 226C176 190 208 162 256 150C304 162 336 190 352 226C336 262 304 290 256 302C208 290 176 262 160 226Z"
+    fill="url(#saeShadow)"
+    opacity="0.82"
+  />
+
+  <path
+    d="M176 226C186 192 214 166 256 148"
+    stroke="#6EC0FF"
+    stroke-opacity="0.56"
+    stroke-width="1.8"
+  />
+  <path
+    d="M336 226C326 192 298 166 256 148"
+    stroke="#6EC0FF"
+    stroke-opacity="0.56"
+    stroke-width="1.8"
+  />
+
+  <path d="M256 150L304 226L256 304L208 226L256 150Z" fill="url(#saeInner)" stroke="#E6F7FF" stroke-opacity="0.84" stroke-width="1.8"/>
+  <path d="M256 150V304" stroke="#A7D9FF" stroke-opacity="0.72" stroke-width="1.6"/>
+  <path d="M208 226H304" stroke="#A7D9FF" stroke-opacity="0.72" stroke-width="1.6"/>
+
+  <path d="M160 226H188" stroke="#1B74F0" stroke-width="12" stroke-linecap="square"/>
+  <path d="M324 226H352" stroke="#1B74F0" stroke-width="12" stroke-linecap="square"/>
+</svg>

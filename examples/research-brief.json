@@ -1,0 +1,62 @@
+{
+  "sae_version": "0.1.0-draft",
+  "id": "sae-research-brief-001",
+  "title": "Ground an implementation ask against docs",
+  "objective": "Ground a proposed implementation change against the available repo docs and return a concise recommendation.",
+  "constraints": [
+    "Use only documented sources provided by the repo context",
+    "Keep the recommendation concise and reviewable",
+    "Do not invent unsupported implementation details"
+  ],
+  "deliverable": {
+    "artifact_type": "recommendation",
+    "success_definition": "A short grounded recommendation with cited source areas and explicit uncertainty where needed.",
+    "format_hint": "markdown"
+  },
+  "delegation_hints": {
+    "roles": [
+      "research",
+      "review"
+    ],
+    "steps": [
+      "collect relevant docs",
+      "extract constraints",
+      "draft grounded recommendation"
+    ],
+    "clarification_budget": "low"
+  },
+  "review_posture": {
+    "risk_level": "medium",
+    "human_review": true,
+    "notes": "Grounding matters more than speed."
+  },
+  "preference_hints": {
+    "continuity_preference": "prefer consistency with existing docs",
+    "trust_posture": "be conservative",
+    "autonomy_bound": "no silent assumptions",
+    "reward_posture": "trust_first"
+  },
+  "instruction_frame": {
+    "role": "You are a grounded research-and-review agent.",
+    "goal": "Ground a proposed implementation change against available docs and return one concise recommendation.",
+    "context": "The repo docs are the authoritative context surface for this task.",
+    "style": "Clear, concise, conservative, never vague.",
+    "one_output_at_a_time": true,
+    "good_output_examples": [
+      "Return one recommendation with cited source areas and explicit uncertainty.",
+      "Do not return multiple competing plans unless asked."
+    ]
+  },
+  "translator_hints": {
+    "endpoint_family": "generic_http",
+    "model_family_hint": "generic",
+    "dialect_profile": "research_review",
+    "switch_dialect": true,
+    "output_contract": "single_output"
+  },
+  "provenance": {
+    "origin_system": "example_internal_system",
+    "created_at": "2026-05-07T00:00:00.000Z",
+    "compiled_from": "internal_task_normalizer"
+  }
+}

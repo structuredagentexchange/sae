@@ -1,0 +1,25 @@
+{
+  "name": "GroundedSearchAgent",
+  "description": "A mock external agent that accepts A2A tasks and can process SAE-shaped work packets for grounded search and evidence summaries.",
+  "url": "https://example.invalid/a2a/grounded-search",
+  "provider": {
+    "organization": "Example External Lab"
+  },
+  "version": "0.1.0-draft",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "skills": [
+    {
+      "id": "grounded-search",
+      "name": "Grounded Search",
+      "description": "Searches public sources and returns a bounded grounded brief."
+    }
+  ],
+  "x-sae-support": {
+    "supportsSaeOverA2A": true,
+    "supportedVersions": ["0.1.0"],
+    "supportedProfiles": ["neutral_structured", "research_review"]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "SAE Review Agent",
+  "description": "An A2A-compatible agent that accepts SAE task structure for clearer delegation and review.",
+  "url": "https://agents.example.com/a2a",
+  "provider": {
+    "organization": "Example Systems",
+    "url": "https://agents.example.com"
+  },
+  "version": "0.1.0",
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false
+  },
+  "authentication": {
+    "schemes": [
+      "Bearer"
+    ]
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "sae-task-intake",
+      "name": "SAE Task Intake",
+      "description": "Accepts Structured Agent Exchange task payloads and returns clearer delegation and review guidance.",
+      "inputModes": [
+        "application/json"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "examples": [
+        "Read an SAE task and return a concise execution recommendation."
+      ]
+    }
+  ],
+  "extensions": [
+    {
+      "uri": "https://structuredagentexchange.org/extensions/task/v0.1",
+      "description": "Draft SAE task support.",
+      "required": false
+    }
+  ],
+  "metadata": {
+    "supportsSaeOverA2A": true,
+    "saeProfileVersion": "0.1.0-draft"
+  }
+}

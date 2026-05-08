@@ -1,0 +1,33 @@
+{
+  "sae_version": "0.1.0-draft",
+  "id": "sae-hello-http-001",
+  "title": "Simple adapter review",
+  "objective": "Review a small adapter proposal and return the safest first implementation cut.",
+  "constraints": [
+    "keep the first cut reversible",
+    "keep the output readable by a human reviewer"
+  ],
+  "deliverable": {
+    "artifact_type": "review_packet",
+    "success_definition": "A downstream implementer can act on the packet without guessing intent.",
+    "format_hint": "markdown+json"
+  },
+  "delegation_hints": {
+    "roles": ["planner", "reviewer"],
+    "steps": [
+      "inspect the objective",
+      "return a safe first-cut recommendation"
+    ],
+    "clarification_budget": "low"
+  },
+  "review_posture": {
+    "risk_level": "medium",
+    "human_review": true,
+    "notes": "Do not widen into live deployment."
+  },
+  "provenance": {
+    "origin_system": "hello-sae-http",
+    "created_at": "2026-05-07T00:00:00.000Z",
+    "compiled_from": "fuzzy_ask"
+  }
+}

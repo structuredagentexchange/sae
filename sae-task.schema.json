@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structuredagentexchange.org/schema/sae-task.schema.json",
+  "title": "Structured Agent Exchange Task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sae_version",
+    "id",
+    "objective",
+    "constraints",
+    "deliverable",
+    "review_posture"
+  ],
+  "properties": {
+    "sae_version": {
+      "type": "string",
+      "const": "0.1.0-draft"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 1
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "deliverable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_type",
+        "success_definition"
+      ],
+      "properties": {
+        "artifact_type": {
+          "type": "string"
+        },
+        "success_definition": {
+          "type": "string"
+        },
+        "format_hint": {
+          "type": "string"
+        }
+      }
+    },
+    "delegation_hints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "clarification_budget": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      }
+    },
+    "review_posture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "risk_level",
+        "human_review"
+      ],
+      "properties": {
+        "risk_level": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "human_review": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "preference_hints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "continuity_preference": {
+          "type": "string"
+        },
+        "trust_posture": {
+          "type": "string"
+        },
+        "autonomy_bound": {
+          "type": "string"
+        },
+        "reward_posture": {
+          "type": "string"
+        }
+      }
+    },
+    "instruction_frame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "role",
+        "goal",
+        "context",
+        "style"
+      ],
+      "properties": {
+        "role": {
+          "type": "string"
+        },
+        "goal": {
+          "type": "string"
+        },
+        "context": {
+          "type": "string"
+        },
+        "style": {
+          "type": "string"
+        },
+        "one_output_at_a_time": {
+          "type": "boolean"
+        },
+        "good_output_examples": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "translator_hints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "endpoint_family": {
+          "type": "string",
+          "enum": [
+            "openai_responses",
+            "anthropic_messages",
+            "google_gemini",
+            "qwen_chat",
+            "llama_local",
+            "generic_http"
+          ]
+        },
+        "model_family_hint": {
+          "type": "string"
+        },
+        "dialect_profile": {
+          "type": "string"
+        },
+        "switch_dialect": {
+          "type": "boolean"
+        },
+        "output_contract": {
+          "type": "string",
+          "enum": [
+            "single_output",
+            "multi_output"
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "origin_system": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "compiled_from": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
