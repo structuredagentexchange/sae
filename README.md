@@ -2,7 +2,7 @@
 
 An open specification for sharing the shape of agent work across A2A and non-A2A systems.
 
-> Status: Public draft. Internal POC complete. External evaluation pending. Not yet a third-party validated standard.
+> Status: Public draft. External evaluation pending. Not yet a third-party validated standard.
 
 ## What SAE is
 
@@ -145,6 +145,3 @@ If you are new here, use this order:
 - `CONTRIBUTING.md`
 - `GOVERNANCE.md`
 
-## Documentation site
-
-The `docs/` folder contains the SAE documentation homepage and wiki for GitHub Pages.

@@ -9,7 +9,7 @@ This repository currently includes:
 - an example A2A Agent Card
 - a plain HTTP adapter example
 - a benchmark harness
-- a reproducible POC export script
+- a reproducible benchmark export script
 
 ## What Counts As A Real External Implementation
 
@@ -27,7 +27,7 @@ An external implementation should:
 3. MCP/tool-host translation layer
 4. CLI or orchestrator adapter
 
-## POC materials
+## Benchmark materials
 
 - `poc/README.md`
 - `poc/mock-external-a2a/agent-card.json`

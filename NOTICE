@@ -1,19 +1,17 @@
 SAE Standard Notice
 
-This repository is the beginning of a public, versioned standard for SAE.
+This repository contains the public Structured Agent Exchange (SAE) specification.
 
-Copyright notice:
+Copyright (c) 2026 Structured Agent Exchange Contributors. Licensed under the Apache License, Version 2.0.
 
-Set this line to the repository owner's chosen copyright name before first public publication.
+SAE is published as a small, neutral, versioned standard for sharing the shape of agent work across systems.
 
-Current intent:
+This repository includes:
 
-- keep the public standard small, neutral, and separable from any single product
-- publish schemas, examples, conformance notes, and translation guidance
-- support outside implementations across A2A and non-A2A systems
+- the public schema
+- examples
+- conformance guidance
+- translation guidance
+- evaluation materials for outside implementations
 
-Important boundary:
-
-- this repository contains the public SAE standard
-- product-specific runtimes, user interfaces, and private orchestration layers do not
-  need to be adopted in order to implement SAE
+SAE can be implemented independently of any product-specific runtime, user interface, or private orchestration layer.
